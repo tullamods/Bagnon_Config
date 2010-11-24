@@ -4,7 +4,7 @@
 	Bagnon Config Localization Information: Chinese Simplified
 		Credits: Diablohu, yleaf@cwdg(yaroot@gmail.com), 狂飙@cwdg(networm@qq.com)
 
-	Last Update: 2009/07/03 by 狂飙@cwdg(networm@qq.com)
+	Last Update: 2010/11/14 by 狂飙@cwdg(networm@qq.com)
 
 --]]
 
@@ -21,6 +21,7 @@ L.Frame = '窗口'
 L.Inventory = '背包'
 L.Bank = '银行'
 L.KeyRing = '钥匙链'
+L.GuildBank = '公会银行'
 L.LockFramePositions = '锁定位置'
 L.ShowEmptyItemSlotBackground = '显示空格背景材质'
 L.HighlightItemsByQuality = '按物品品质对物品染色'
@@ -44,6 +45,7 @@ L.EnableAutoDisplay_trade = '交易时'
 L.EnableAutoDisplay_craft = '制作物品时'
 L.EnableAutoDisplay_mail = '打开邮箱时'
 L.EnableAutoDisplay_guildbank = '打开公会银行时'
+L.EnableAutoDisplay_player = '打开角色信息时'
 L.DisplaySettings = '事件设置'
 L.DisplaySettingsTitle = '何时自动打开背包'
 L.FrameSettings = '显示设置'
@@ -51,3 +53,11 @@ L.FrameSettingsTitle = '窗口显示设置'
 L.GeneralSettings = '通用设置'
 L.GeneralSettingsTitle = 'Bagnon的通用设置'
 L.EnableBlizzardBagPassThrough = '禁用的背包使用暴雪默认框体'
+L.EnableBagBreak = '启用背包分散布局'
+L.ColorSettings = '颜色设置'
+L.ColorSettingsTitle = '物品染色设置'
+L.ItemHighlightOpacity = '物品高亮亮度'
+L.ItemSlotColor_ammo = '弹药包颜色'
+L.ItemSlotColor_trade = '商业包颜色'
+L.ItemSlotColor_shard = '绑定包颜色'
+L.ItemSlotColor_keyring = '钥匙链颜色'
