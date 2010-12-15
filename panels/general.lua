@@ -97,6 +97,9 @@ function GeneralOptions:AddWidgets()
 	
 	local enableBlizzardBagPassThrough = self:CreateBlizzardBagPassThroughCheckbox()
 	enableBlizzardBagPassThrough:SetPoint('TOPLEFT', showEmptyItemSlotTextures, 'BOTTOMLEFT', 0, -SPACING)
+	
+	local enableFlashFind = self:CreateFlashFindCheckbox()
+	enableFlashFind:SetPoint('TOPLEFT', enableBlizzardBagPassThrough, 'BOTTOMLEFT', 0, -SPACING)
 end
 
 function GeneralOptions:UpdateWidgets()
@@ -113,6 +116,7 @@ function GeneralOptions:UpdateWidgets()
 	self:GetHighlightQuestItemsCheckbox():UpdateChecked()
 	self:GetColorItemSlotsCheckbox():UpdateChecked()
 	self:GetBlizzardBagPassThroughCheckbox():UpdateChecked()
+	self:GetFlashFindCheckbox():UpdateChecked()
 end
 
 
@@ -216,6 +220,27 @@ end
 function GeneralOptions:GetBlizzardBagPassThroughCheckbox()
 	return self.blizzardBagPassThroughCheckbox
 end 
+
+--flash find
+function GeneralOptions:CreateFlashFindCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.EnableFlashFind, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetEnableFlashFind(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:IsFlashFindEnabled()
+	end
+
+	self.flashFindCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetFlashFindCheckbox()
+	return self.flashFindCheckbox
+end 
+
 
 
 --[[ Load the thing ]]--
