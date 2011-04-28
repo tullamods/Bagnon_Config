@@ -168,7 +168,7 @@ end
 
 
 --highlight unusable items
-function ColorOptions:CreateHighlightItemsByQualityCheckbox()
+function ColorOptions:CreateHighlightUnusableItemsCheckbox()
 	local button = Bagnon.OptionsCheckButton:New(L.HighlightUnusableItems, self)
 
 	button.OnEnableSetting = function(self, enable)
