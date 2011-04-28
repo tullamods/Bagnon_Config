@@ -53,7 +53,7 @@ function ColorOptions:ITEM_HIGHLIGHT_QUALITY_UPDATE()
 end
 
 function ColorOptions:ITEM_HIGHLIGHT_UNUSABLE_UPDATE()
-	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
+	self:GetHighlightUnusableItemsCheckbox():UpdateChecked()
 end
 
 function ColorOptions:ITEM_HIGHLIGHT_QUEST_UPDATE()
