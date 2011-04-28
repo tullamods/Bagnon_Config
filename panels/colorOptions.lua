@@ -41,21 +41,26 @@ function ColorOptions:UpdateMessages()
 	end
 	
 	self:RegisterMessage('ITEM_HIGHLIGHT_QUALITY_UPDATE')
+	self:RegisterMessage('ITEM_HIGHLIGHT_UNUSABLE_UPDATE')
 	self:RegisterMessage('ITEM_HIGHLIGHT_QUEST_UPDATE')
 	self:RegisterMessage('ITEM_SLOT_COLOR_ENABLED_UPDATE')
 	self:RegisterMessage('ITEM_SLOT_COLOR_UPDATE')
 	self:RegisterMessage('ITEM_HIGHLIGHT_OPACITY_UPDATE')
 end
 
-function ColorOptions:ITEM_HIGHLIGHT_QUALITY_UPDATE(msg, enable)
+function ColorOptions:ITEM_HIGHLIGHT_QUALITY_UPDATE()
 	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
 end
 
-function ColorOptions:ITEM_HIGHLIGHT_QUEST_UPDATE(msg, enable)
+function ColorOptions:ITEM_HIGHLIGHT_UNUSABLE_UPDATE()
+	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
+end
+
+function ColorOptions:ITEM_HIGHLIGHT_QUEST_UPDATE()
 	self:GetHighlightQuestItemsCheckbox():UpdateChecked()
 end
 
-function ColorOptions:ITEM_SLOT_COLOR_ENABLED_UPDATE(msg, enable)
+function ColorOptions:ITEM_SLOT_COLOR_ENABLED_UPDATE()
 	self:GetColorItemSlotsCheckbox():UpdateChecked()
 end
 
@@ -63,7 +68,7 @@ function ColorOptions:ITEM_SLOT_COLOR_UPDATE(msg, type, r, g, b)
 	self:GetItemSlotColorSelector(type):SetColor(r, g, b, a)
 end
 
-function ColorOptions:ITEM_HIGHLIGHT_OPACITY_UPDATE(msg, value)
+function ColorOptions:ITEM_HIGHLIGHT_OPACITY_UPDATE()
 	self:GetHighlightOpacitySlider():UpdateValue()
 end
 
