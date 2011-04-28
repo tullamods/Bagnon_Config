@@ -98,8 +98,11 @@ function ColorOptions:AddWidgets()
 	local highlightItemsByQuality = self:CreateHighlightItemsByQualityCheckbox()
 	highlightItemsByQuality:SetPoint('TOPLEFT', colorItemSlots, 'BOTTOMLEFT', 0, -SPACING)
 
+        local highlightUnusableItems = self:CreateHighlightUnusableItemsCheckbox()
+	highlightUnusableItems:SetPoint('TOPLEFT', highlightItemsByQuality, 'BOTTOMLEFT', 0, -SPACING)   
+
 	local highightQuestItems = self:CreateHighlightQuestItemsCheckbox()
-	highightQuestItems:SetPoint('TOPLEFT', highlightItemsByQuality, 'BOTTOMLEFT', 0, -SPACING)
+	highightQuestItems:SetPoint('TOPLEFT', highlightUnusableItems, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local opacity = self:CreateHighlightOpacitySlider()
 	opacity:SetPoint('BOTTOMLEFT', self, 'BOTTOMLEFT', 16, 10)
@@ -161,6 +164,27 @@ end
 
 function ColorOptions:GetHighlightItemsByQualityCheckbox()
 	return self.highlightItemsByQualityCheckbox
+end
+
+
+--highlight unusable items
+function ColorOptions:CreateHighlightItemsByQualityCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.HighlightUnusableItems, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetHighlightUnusableItems(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:HighlightUnusableItems()
+	end
+
+	self.highlightUnusableItemsCheckbox = button
+	return button
+end
+
+function ColorOptions:GetHighlightUnusableItemsCheckbox()
+	return self.highlightUnusableItemsCheckbox
 end
 
 
