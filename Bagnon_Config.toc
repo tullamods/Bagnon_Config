@@ -1,7 +1,7 @@
 ## Interface: 40100
 ## Title: Bagnon Config
 ## Notes: GUI based configuration for Bagnon
-## Author: Tuller
+## Author: Tuller & Jaliborc (João Libório)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
 localization.xml
