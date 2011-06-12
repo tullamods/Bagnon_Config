@@ -1,4 +1,4 @@
-## Interface: 40100
+## Interface: 40200
 ## Title: Bagnon Config
 ## Notes: GUI based configuration for Bagnon
 ## Author: Tuller & Jaliborc (João Libório)
