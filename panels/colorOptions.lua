@@ -11,7 +11,7 @@ ColorOptions:Hide()
 Bagnon.ColorOptions = ColorOptions
 
 local SPACING = 4
-local ITEM_SLOT_COLOR_TYPES = {'trade', 'keyring'}
+local ITEM_SLOT_COLOR_TYPES = {'normal', 'trade'}
 
 
 --[[

@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 	THIS FILE IS ENCODED IN UTF-8
 
 	Bagnon Config Localization Information: Chinese Simplified
@@ -36,7 +36,6 @@ L.EnableSearchToggle = '启用搜索按钮'
 L.EnableOptionsToggle = '启用设置按钮'
 L.EnableFrame_inventory = '启用背包框体'
 L.EnableFrame_bank = '启用银行框体'
-L.EnableFrame_keys = '启用钥匙链框体'
 L.SettingRequiresRestart = '这个设置将在你下次登录时生效'
 L.EnableAutoDisplay_bank = '打开银行时'
 L.EnableAutoDisplay_ah = '打开拍卖行时'
@@ -60,4 +59,3 @@ L.ItemHighlightOpacity = '物品高亮亮度'
 L.ItemSlotColor_ammo = '弹药包颜色'
 L.ItemSlotColor_trade = '商业包颜色'
 L.ItemSlotColor_shard = '绑定包颜色'
-L.ItemSlotColor_keyring = '钥匙链颜色'
