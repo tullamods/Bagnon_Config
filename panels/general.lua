@@ -87,7 +87,7 @@ function GeneralOptions:AddWidgets()
 	enableBank:SetPoint('TOPLEFT', enableInventory, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local lockFramePositions = self:CreateLockFramePositionsCheckbox()
-	lockFramePositions:SetPoint('TOPLEFT', enableKeyring, 'BOTTOMLEFT', 0, -SPACING)
+	lockFramePositions:SetPoint('TOPLEFT', enableBank, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local showEmptyItemSlotTextures = self:CreateEmptyItemSlotTextureCheckbox()
 	showEmptyItemSlotTextures:SetPoint('TOPLEFT', lockFramePositions, 'BOTTOMLEFT', 0, -SPACING)
