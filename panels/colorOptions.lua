@@ -11,7 +11,14 @@ ColorOptions:Hide()
 Bagnon.ColorOptions = ColorOptions
 
 local SPACING = 4
-local ITEM_SLOT_COLOR_TYPES = {'normal', 'trade'}
+local SLOT_COLOR_TYPES = {}
+
+for bit, name in pairs(BAGNON_BAG_TYPES) do
+	tinsert(SLOT_COLOR_TYPES, name)
+end
+
+sort(SLOT_COLOR_TYPES)
+tinsert(SLOT_COLOR_TYPES, 1, 'normal')
 
 
 --[[
@@ -139,7 +146,7 @@ function ColorOptions:UpdateWidgets()
 end
 
 function ColorOptions:GetColorTypes()
-	return pairs(ITEM_SLOT_COLOR_TYPES)
+	return pairs(SLOT_COLOR_TYPES)
 end
 
 

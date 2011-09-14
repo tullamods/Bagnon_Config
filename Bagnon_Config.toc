@@ -1,6 +1,6 @@
 ## Interface: 40200
-## Title: Bagnon Config
-## Notes: GUI based configuration for Bagnon
+## Title: |cff20ff20Bagnon Config|r
+## Notes: Load on demand configuration for Bagnon
 ## Author: Tuller & Jaliborc (João Libório)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
