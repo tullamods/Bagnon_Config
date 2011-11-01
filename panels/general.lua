@@ -97,6 +97,9 @@ function GeneralOptions:AddWidgets()
 	
 	local enableFlashFind = self:CreateFlashFindCheckbox()
 	enableFlashFind:SetPoint('TOPLEFT', enableBlizzardBagPassThrough, 'BOTTOMLEFT', 0, -SPACING)
+
+  local enableTipItemCount = self:CreateTipCountCheckbox()
+  enableTipItemCount:SetPoint('TOPLEFT', enableFlashFind, 'BOTTOMLEFT', 0, -SPACING)
 end
 
 function GeneralOptions:UpdateWidgets()
@@ -235,7 +238,27 @@ end
 
 function GeneralOptions:GetFlashFindCheckbox()
 	return self.flashFindCheckbox
-end 
+end
+
+--tip count
+function GeneralOptions:CreateTipCountCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.EnableTipCount, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetEnableTipCount(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:IsTipCountEnabled()
+	end
+
+	self.tipCountCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetTipCountCheckbox()
+	return self.tipCountCheckbox
+end
 
 
 
