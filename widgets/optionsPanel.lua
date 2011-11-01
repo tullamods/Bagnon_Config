@@ -3,8 +3,7 @@
 		A bagnon options panel
 --]]
 
-local OptionsPanel = Bagnon.Classy:New('Frame')
-Bagnon.OptionsPanel = OptionsPanel
+local OptionsPanel = Bagnon:NewClass('OptionsPanel', 'Frame')
 
 function OptionsPanel:New(name, parent, title, subtitle, icon)
 	local f = self:Bind(CreateFrame('Frame', name))

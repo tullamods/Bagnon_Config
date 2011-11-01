@@ -3,8 +3,7 @@
 		A bagnon dropdown menu
 --]]
 
-local OptionsCheckButton = Bagnon.Classy:New('CheckButton')
-Bagnon.OptionsCheckButton = OptionsCheckButton
+local OptionsCheckButton = Bagnon:NewClass('OptionsCheckButton', 'CheckButton')
 
 function OptionsCheckButton:New(name, parent)
 	local b = self:Bind(CreateFrame('CheckButton', parent:GetName() .. name, parent, 'InterfaceOptionsCheckButtonTemplate'))

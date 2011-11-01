@@ -1,12 +1,13 @@
 --[[
-	THIS FILE IS ENCODED IN UTF-8
+THIS FILE IS ENCODED IN UTF-8
 
-	Bagnon Config Localization Information: Chinese Traditional
-		  2008/12/01 by yleaf@cwdg(yaroot@gmail.com)
-		  2009/06/19 by 狂飆@cwdg(networm@qq.com)
-		  2011/07/06 by Seraveegd@鬼霧峰
+Bagnon Config Localization Information: Chinese Traditional
+2008/12/01 by yleaf@cwdg(yaroot@gmail.com)
+2009/06/19 by 狂飆@cwdg(networm@qq.com)
+2011/07/06 by Seraveegd@鬼霧峰
+2011/08/30 by Seraveegd@鬼霧峰
 
-	Last Update: 2011/07/06 by Seraveegd@鬼霧峰
+Last Update: 2011/08/30 by Seraveegd@鬼霧峰
 
 --]]
 
@@ -40,6 +41,7 @@ L.EnableOptionsToggle = '啟用設定按鈕'
 L.EnableFrame_inventory = '啟用背包框架'
 L.EnableFrame_bank = '啟用銀行框架'
 L.SettingRequiresRestart = '這個設定將在你下次登錄時生效'
+
 L.EnableAutoDisplay_bank = '開啟銀行時顯示背包'
 L.EnableAutoDisplay_ah = '開啟拍賣行時顯示背包'
 L.EnableAutoDisplay_vendor = '離開商人時關閉背包'
@@ -50,17 +52,25 @@ L.EnableAutoDisplay_guildbank = '開啟公會銀行時顯示背包'
 L.EnableAutoDisplay_player = '開啟角色資訊時顯示背包'
 L.EnableAutoDisplay_combat = '進入戰鬥時關閉背包'
 L.EnableAutoDisplay_vehicle = '進入載具時關閉背包'
+
 L.DisplaySettings = '自動顯示'
 L.DisplaySettingsTitle = '自動顯示視窗設定'
 L.FrameSettings = '框架設定'
 L.FrameSettingsTitle = '視窗顯示設定'
 L.GeneralSettings = '通用設定'
 L.GeneralSettingsTitle = 'Bagnon的通用設定'
-L.EnableBlizzardBagPassThrough = '禁用的背包使用暴雪默認框架'
+L.EnableBlizzardBagPassThrough = '禁用的背包顯示內建框架'
 L.EnableBagBreak = '啟用背包分散佈局'
 L.ColorSettings = '顏色設定'
 L.ColorSettingsTitle = '物品槽顏色設定'
 L.ItemHighlightOpacity = '物品高亮亮度'
-L.ItemSlotColor_normal = '一般背包槽顏色'
-L.ItemSlotColor_trade = '專業包槽顏色'
 L.EnableFlashFind = '啟用閃爍尋找'
+
+L.ItemSlotColor_normal = '一般背包槽顏色'
+L.ItemSlotColor_leather = '製皮包槽顏色'
+L.ItemSlotColor_inscri = '銘文包槽顏色'
+L.ItemSlotColor_herb = '草藥包槽顏色'
+L.ItemSlotColor_enchant = '附魔包槽顏色'
+L.ItemSlotColor_engineer = '工具箱槽顏色'
+L.ItemSlotColor_gem = '寶石包槽顏色'
+L.ItemSlotColor_mine = '礦石包槽顏色'

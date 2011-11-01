@@ -4,8 +4,7 @@
 --]]
 
 local Bagnon = LibStub('AceAddon-3.0'):GetAddon('Bagnon')
-local OptionsSlider = Bagnon.Classy:New('Slider')
-Bagnon.OptionsSlider = OptionsSlider
+local OptionsSlider = Bagnon:NewClass('OptionsSlider', 'Slider')
 
 
 --[[ Constructor ]]--

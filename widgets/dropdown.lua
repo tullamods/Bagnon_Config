@@ -3,8 +3,7 @@
 		A bagnon dropdown menu
 --]]
 
-local OptionsDropdown = Bagnon.Classy:New('Frame')
-Bagnon.OptionsDropdown = OptionsDropdown
+local OptionsDropdown = Bagnon:NewClass('OptionsDropdown', 'Frame')
 
 function OptionsDropdown:New(name, parent, width)
 	local f = self:Bind(CreateFrame('Frame', parent:GetName() .. name, parent, 'UIDropDownMenuTemplate'))

@@ -4,8 +4,7 @@
 --]]
 
 local Bagnon = LibStub('AceAddon-3.0'):GetAddon('Bagnon')
-local ColorSelector = Bagnon.Classy:New('Button')
-Bagnon.OptionsColorSelector = ColorSelector
+local ColorSelector = Bagnon:NewClass('OptionsColorSelector', 'Button')
 
 
 --[[ Constructor ]]--
