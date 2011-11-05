@@ -1,35 +1,34 @@
 --[[
-	Bagnon Config Localization Information: English Language
-		This file must be present to have partial translations
+	Bagnon Config Localization Information: Brasilian Portuguese
 --]]
 
-local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
+local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'ptBR')
 
-L.Columns = 'Columns'
-L.Scale = 'Scale'
-L.Spacing = 'Spacing'
-L.Opacity = 'Opacity'
-L.FrameColor = 'Frame Color'
-L.FrameBorderColor = 'Frame Border Color'
-L.Frame = 'Frame'
-L.Inventory = 'Inventory'
-L.Bank = 'Bank'
+L.Columns = 'Colunas'
+L.Scale = 'Escala'
+L.Spacing = 'Espaçamento'
+L.Opacity = 'Transparência'
+L.FrameColor = 'Cor de Fundo'
+L.FrameBorderColor = 'Cor do Bordo'
+L.Frame = 'Janela'
+L.Inventory = 'Sacos'
+L.Bank = 'Banco'
 L.GuildBank = 'Guild Bank'
-L.LockFramePositions = 'Lock frame positions'
+L.LockFramePositions = 'Bloquear posição das janelas'
 L.ShowEmptyItemSlotBackground = 'Display a background for empty item slots'
-L.HighlightItemsByQuality = 'Highlight items by quality' 
-L.HighlightUnusableItems = 'Highlight unusable items'
-L.HighlightQuestItems = 'Highlight quest items'
+L.HighlightItemsByQuality = 'Realçar itens por qualidade' 
+L.HighlightUnusableItems = 'Realçar itens inutilizáveis'
+L.HighlightQuestItems = 'Realçar itens de missão'
 L.ReverseSlotOrdering = 'Reverse bag slot ordering'
 L.ColorItemSlotsByBagType = 'Color empty item slots by bag type'
-L.FrameLayer = 'Layer'
-L.EnableBagFrame = 'Enable bag frame'
-L.EnableMoneyFrame = 'Enable money frame'
-L.EnableDBOFrame = 'Enable databroker frame'
-L.EnableSearchToggle = 'Enable search toggle'
-L.EnableOptionsToggle = 'Enable options toggle'
-L.EnableFrame_inventory = 'Enable inventory frame'
-L.EnableFrame_bank = 'Enable bank frame'
+L.FrameLayer = 'Camada'
+L.EnableBagFrame = 'Mostrar lista de sacos'
+L.EnableMoneyFrame = 'Mostrar dinheiro'
+L.EnableDBOFrame = 'Mostrar DataBroker'
+L.EnableSearchToggle = 'Mostrar botão da pesquisa'
+L.EnableOptionsToggle = 'Mostrar botão da configração'
+L.EnableFrame_inventory = 'Ativar janela dos sacos'
+L.EnableFrame_bank = 'Ativar janela do banco'
 L.SettingRequiresRestart = 'This setting will take effect the next time you log in'
 
 L.EnableAutoDisplay_bank = 'Display inventory when visiting the bank'
