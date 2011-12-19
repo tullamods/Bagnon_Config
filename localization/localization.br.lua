@@ -3,6 +3,7 @@
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'ptBR')
+if not L then return end
 
 L.Columns = 'Colunas'
 L.Scale = 'Escala'

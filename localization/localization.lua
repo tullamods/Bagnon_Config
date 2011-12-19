@@ -56,6 +56,7 @@ L.ColorSettingsTitle = 'Item slot coloring settings'
 L.ItemHighlightOpacity = 'Item highlight brightness'
 L.EnableFlashFind = 'Enable flash find'
 L.EnableTipCount = 'Enable tooltip item count'
+L.EnableFading = 'Enable frame fading'
 
 L.ItemSlotColor_normal = 'Normal bag slot color'
 L.ItemSlotColor_leather = 'Leatherworking bag slot color'
