@@ -57,6 +57,7 @@ L.ItemHighlightOpacity = 'Item highlight brightness'
 L.EnableFlashFind = 'Enable flash find'
 L.EnableTipCount = 'Enable tooltip item count'
 L.EnableFading = 'Enable frame fading'
+L.AllowDisableBags = 'Disable bags when clicked'
 
 L.ItemSlotColor_normal = 'Normal bag slot color'
 L.ItemSlotColor_leather = 'Leatherworking bag slot color'

@@ -92,8 +92,11 @@ function GeneralOptions:AddWidgets()
 	local showEmptyItemSlotTextures = self:CreateEmptyItemSlotTextureCheckbox()
 	showEmptyItemSlotTextures:SetPoint('TOPLEFT', lockFramePositions, 'BOTTOMLEFT', 0, -SPACING)
 	
+	local allowDisableBags = self:CreateDisableBagsCheckbox()
+	allowDisableBags:SetPoint('TOPLEFT', showEmptyItemSlotTextures, 'BOTTOMLEFT', 0, -SPACING)
+	
 	local enableBlizzardBagPassThrough = self:CreateBlizzardBagPassThroughCheckbox()
-	enableBlizzardBagPassThrough:SetPoint('TOPLEFT', showEmptyItemSlotTextures, 'BOTTOMLEFT', 0, -SPACING)
+	enableBlizzardBagPassThrough:SetPoint('TOPLEFT', allowDisableBags, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local enableFlashFind = self:CreateFlashFindCheckbox()
 	enableFlashFind:SetPoint('TOPLEFT', enableBlizzardBagPassThrough, 'BOTTOMLEFT', 0, -SPACING)
@@ -117,6 +120,7 @@ function GeneralOptions:UpdateWidgets()
 	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
 	self:GetHighlightQuestItemsCheckbox():UpdateChecked()
 	self:GetColorItemSlotsCheckbox():UpdateChecked()
+	self:GetDisableBagsCheckbox():UpdateChecked()
 	self:GetBlizzardBagPassThroughCheckbox():UpdateChecked()
 	self:GetFlashFindCheckbox():UpdateChecked()
 	self:GetFadingCheckbox():UpdateChecked()
@@ -201,6 +205,26 @@ end
 
 function GeneralOptions:GetLockFramePositionsCheckbox()
 	return self.lockFramePositionsCheckbox
+end
+
+-- bag disabling
+function GeneralOptions:CreateDisableBagsCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.AllowDisableBags, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:AllowDisableBags(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:CanDisableBags()
+	end
+
+	self.disableBagsCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetDisableBagsCheckbox()
+	return self.disableBagsCheckbox
 end
 
 
