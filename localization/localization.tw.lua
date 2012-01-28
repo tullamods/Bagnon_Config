@@ -6,8 +6,9 @@ Bagnon Config Localization Information: Chinese Traditional
 2009/06/19 by 狂飆@cwdg(networm@qq.com)
 2011/07/06 by Seraveegd@鬼霧峰
 2011/08/30 by Seraveegd@鬼霧峰
+2012/01/24 by Seraveegd@鬼霧峰
 
-Last Update: 2011/08/30 by Seraveegd@鬼霧峰
+Last Update: 2012/01/24 by Seraveegd@鬼霧峰
 
 --]]
 
@@ -64,12 +65,16 @@ L.ColorSettings = '顏色設定'
 L.ColorSettingsTitle = '物品槽顏色設定'
 L.ItemHighlightOpacity = '物品高亮亮度'
 L.EnableFlashFind = '啟用閃爍尋找'
+L.EnableTipCount = '啟用物品統計提示'
+L.EnableFading = '啟用框架漸隱'
+L.AllowDisableBags = '當點擊時禁用背包'
 
 L.ItemSlotColor_normal = '一般背包槽顏色'
 L.ItemSlotColor_leather = '製皮包槽顏色'
 L.ItemSlotColor_inscri = '銘文包槽顏色'
 L.ItemSlotColor_herb = '草藥包槽顏色'
 L.ItemSlotColor_enchant = '附魔包槽顏色'
-L.ItemSlotColor_engineer = '工具箱槽顏色'
+L.ItemSlotColor_engineer = '工程箱槽顏色'
 L.ItemSlotColor_gem = '寶石包槽顏色'
 L.ItemSlotColor_mine = '礦石包槽顏色'
+L.ItemSlotColor_tackle = '工具箱槽顏色'
