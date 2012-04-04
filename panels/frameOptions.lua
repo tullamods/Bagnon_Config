@@ -272,11 +272,11 @@ function FrameOptions:CreateFrameSelector()
 		self:AddItem(INVENTORY_TOOLTIP, 'inventory')
 		self:AddItem(L.Bank, 'bank')
 		
-		if IsAddOnLoaded('Bagnon_GuildBank') then
+		if select(5, GetAddOnInfo('Bagnon_GuildBank')) then
 			self:AddItem(GUILD_BANK, 'guildbank')
 		end
 		
-		if IsAddOnLoaded('Bagnon_VoidStorage') then
+		if select(5, GetAddOnInfo('Bagnon_VoidStorage')) then
 			self:AddItem(VOID_STORAGE, 'voidstorage')
 		end
 	end

@@ -1,5 +1,5 @@
 ## Interface: 40300
-## Title: Bagnon Config
+## Title: |cff20ff20Bagnon Config|r
 ## Notes: Load on demand configuration for Bagnon
 ## Author: Tuller & Jaliborc (João Cardoso)
 ## Dependencies: Bagnon
