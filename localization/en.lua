@@ -40,6 +40,7 @@ L.EnableAutoDisplay_guildbank = 'Display inventory when visiting the guild bank'
 L.EnableAutoDisplay_player = 'Display inventory when opening the player frame'
 L.EnableAutoDisplay_combat = 'Close inventory when entering combat'
 L.EnableAutoDisplay_vehicle = 'Close inventory when entering a vehicle'
+L.EnableAutoDisplay_gems = 'Display inventory when socketing items'
 
 L.DisplaySettings = 'Automatic Display'
 L.DisplaySettingsTitle = 'Automatic frame display settings'
