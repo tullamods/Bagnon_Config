@@ -4,7 +4,7 @@
 	Bagnon Config Localization Information: Chinese Simplified
 		Credits: Diablohu, yleaf@cwdg(yaroot@gmail.com), 狂飙@cwdg(networm@qq.com), 天下牧@萨格拉斯
 
-	Last Update: 2012/03/10 by 天下牧@萨格拉斯
+	Last Update: 2012/08/16 by 天下牧@萨格拉斯
 
 --]]
 
@@ -45,8 +45,8 @@ L.EnableAutoDisplay_mail = '打开邮箱时'
 L.EnableAutoDisplay_guildbank = '打开公会银行时'
 L.EnableAutoDisplay_player = '打开角色信息时'
 L.EnableAutoDisplay_combat = '进入战斗时关闭'
-
 L.EnableAutoDisplay_vehicle = '进入载具时关闭'
+L.EnableAutoDisplay_gems = '打开物品镶嵌时'
 
 L.DisplaySettings = '事件设置'
 L.DisplaySettingsTitle = '何时自动打开背包'
