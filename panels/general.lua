@@ -162,7 +162,7 @@ function GeneralOptions:CreateRequiresRestartDialog()
 			text = L.SettingRequiresRestart,
 			button1 = OKAY,
 			timeout = 0, exclusive = 1, hideOnEscape = 1,
-			preferredIndex = 3
+			preferredIndex = STATICPOPUP_NUMDIALOGS
 		}
 	end
 end
