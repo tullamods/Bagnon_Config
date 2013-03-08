@@ -1,5 +1,5 @@
 --[[
-	Bagnon Config Localization Information: English Language
+	Bagnon Config Localization: English
 		This file must be present to have partial translations
 --]]
 
@@ -19,7 +19,7 @@ L.HighlightItemsByQuality = 'Highlight items by quality'
 L.HighlightUnusableItems = 'Highlight unusable items'
 L.HighlightQuestItems = 'Highlight quest items'
 L.ReverseSlotOrdering = 'Reverse bag slot ordering'
-L.ColorItemSlotsByBagType = 'Color empty item slots by bag type'
+L.ColorItemSlotsByBagType = 'Color empty slots by bag type'
 L.FrameLayer = 'Layer'
 L.EnableBagFrame = 'Enable bag frame'
 L.EnableMoneyFrame = 'Enable money frame'
@@ -58,7 +58,7 @@ L.EnableTipCount = 'Enable tooltip item count'
 L.EnableFading = 'Enable frame fading'
 L.AllowDisableBags = 'Disable bags when clicked'
 
-L.ItemSlotColor_normal = 'Normal bag slot color'
+L.ItemSlotColor_normal = 'Normal slot color'
 L.ItemSlotColor_leather = 'Leatherworking bag slot color'
 L.ItemSlotColor_inscri = 'Inscription bag slot color'
 L.ItemSlotColor_herb = 'Herbalism bag slot color'
@@ -67,3 +67,4 @@ L.ItemSlotColor_engineer = 'Engineering bag slot color'
 L.ItemSlotColor_gem = 'Gem bag slot color'
 L.ItemSlotColor_mine = 'Mining bag slot color'
 L.ItemSlotColor_tackle = 'Tackle box slot color'
+L.ItemSlotColor_cooking = 'Refrigerator slot color'

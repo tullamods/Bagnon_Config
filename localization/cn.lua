@@ -1,11 +1,6 @@
 ﻿--[[
-	THIS FILE IS ENCODED IN UTF-8
-
-	Bagnon Config Localization Information: Chinese Simplified
-		Credits: Diablohu, yleaf@cwdg(yaroot@gmail.com), 狂飙@cwdg(networm@qq.com), 天下牧@萨格拉斯
-
-	Last Update: 2012/08/16 by 天下牧@萨格拉斯
-
+	Bagnon Config Localization: Chinese Simplified
+		Credits: Diablohu, yleaf@cwdg, 狂飙@cwdg, 天下牧@萨格拉斯
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'zhCN')
@@ -73,3 +68,4 @@ L.ItemSlotColor_engineer = '工程箱槽颜色'
 L.ItemSlotColor_gem = '宝石包槽颜色'
 L.ItemSlotColor_mine = '矿石包槽颜色'
 L.ItemSlotColor_tackle = '工具箱槽颜色'
+L.ItemSlotColor_cooking = '烹饪包槽颜色'
