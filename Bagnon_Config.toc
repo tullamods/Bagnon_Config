@@ -1,9 +1,10 @@
-## Interface: 40200
+## Interface: 50200
 ## Title: |cff20ff20Bagnon Config|r
 ## Notes: Load on demand configuration for Bagnon
-## Author: Tuller & Jaliborc (João Libório)
+## Author: Tuller & Jaliborc (João Cardoso)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
-localization.xml
-widgets.xml
-panels.xml
+
+localization\localization.xml
+widgets\widgets.xml
+panels\panels.xml

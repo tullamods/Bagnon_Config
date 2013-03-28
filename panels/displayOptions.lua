@@ -67,7 +67,7 @@ end
 --]]
 
 function DisplayOptions:AddWidgets()
-	local displayEvents = {'bank', 'ah', 'trade', 'guildbank', 'craft', 'player', 'vendor', 'combat', 'vehicle'}
+	local displayEvents = {'bank', 'ah', 'trade', 'gems', 'craft', 'guildbank', 'player', 'vendor', 'combat', 'vehicle'}
 
 	for i, event in ipairs(displayEvents) do
 		self:AddDisplayEventCheckbox(event)

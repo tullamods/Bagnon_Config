@@ -92,11 +92,20 @@ function GeneralOptions:AddWidgets()
 	local showEmptyItemSlotTextures = self:CreateEmptyItemSlotTextureCheckbox()
 	showEmptyItemSlotTextures:SetPoint('TOPLEFT', lockFramePositions, 'BOTTOMLEFT', 0, -SPACING)
 	
+	local allowDisableBags = self:CreateDisableBagsCheckbox()
+	allowDisableBags:SetPoint('TOPLEFT', showEmptyItemSlotTextures, 'BOTTOMLEFT', 0, -SPACING)
+	
 	local enableBlizzardBagPassThrough = self:CreateBlizzardBagPassThroughCheckbox()
-	enableBlizzardBagPassThrough:SetPoint('TOPLEFT', showEmptyItemSlotTextures, 'BOTTOMLEFT', 0, -SPACING)
+	enableBlizzardBagPassThrough:SetPoint('TOPLEFT', allowDisableBags, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local enableFlashFind = self:CreateFlashFindCheckbox()
 	enableFlashFind:SetPoint('TOPLEFT', enableBlizzardBagPassThrough, 'BOTTOMLEFT', 0, -SPACING)
+	
+	local enableFading = self:CreateFadingCheckbox()
+	enableFading:SetPoint('TOPLEFT', enableFlashFind, 'BOTTOMLEFT', 0, -SPACING)
+
+  local enableTipItemCount = self:CreateTipCountCheckbox()
+  enableTipItemCount:SetPoint('TOPLEFT', enableFading, 'BOTTOMLEFT', 0, -SPACING)
 end
 
 function GeneralOptions:UpdateWidgets()
@@ -111,8 +120,11 @@ function GeneralOptions:UpdateWidgets()
 	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
 	self:GetHighlightQuestItemsCheckbox():UpdateChecked()
 	self:GetColorItemSlotsCheckbox():UpdateChecked()
+	self:GetDisableBagsCheckbox():UpdateChecked()
 	self:GetBlizzardBagPassThroughCheckbox():UpdateChecked()
 	self:GetFlashFindCheckbox():UpdateChecked()
+	self:GetFadingCheckbox():UpdateChecked()
+	self:GetTipCountCheckbox():UpdateChecked()
 end
 
 
@@ -149,7 +161,8 @@ function GeneralOptions:CreateRequiresRestartDialog()
 		StaticPopupDialogs['BAGNON_CONFIRM_REQUIRES_RESTART'] = {
 			text = L.SettingRequiresRestart,
 			button1 = OKAY,
-			timeout = 0, exclusive = 1, hideOnEscape = 1
+			timeout = 0, exclusive = 1, hideOnEscape = 1,
+			preferredIndex = STATICPOPUP_NUMDIALOGS
 		}
 	end
 end
@@ -195,6 +208,26 @@ function GeneralOptions:GetLockFramePositionsCheckbox()
 	return self.lockFramePositionsCheckbox
 end
 
+-- bag disabling
+function GeneralOptions:CreateDisableBagsCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.AllowDisableBags, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:AllowDisableBags(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:CanDisableBags()
+	end
+
+	self.disableBagsCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetDisableBagsCheckbox()
+	return self.disableBagsCheckbox
+end
+
 
 --blizzard bag passthrough
 function GeneralOptions:CreateBlizzardBagPassThroughCheckbox()
@@ -235,8 +268,47 @@ end
 
 function GeneralOptions:GetFlashFindCheckbox()
 	return self.flashFindCheckbox
-end 
+end
 
+--fading
+function GeneralOptions:CreateFadingCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.EnableFading, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetFading(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:IsFadingEnabled()
+	end
+
+	self.fadingCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetFadingCheckbox()
+	return self.fadingCheckbox
+end
+
+--tip count
+function GeneralOptions:CreateTipCountCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.EnableTipCount, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetEnableTipCount(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:IsTipCountEnabled()
+	end
+
+	self.tipCountCheckbox = button
+	return button
+end
+
+function GeneralOptions:GetTipCountCheckbox()
+	return self.tipCountCheckbox
+end
 
 
 --[[ Load the thing ]]--

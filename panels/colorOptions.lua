@@ -47,24 +47,18 @@ function ColorOptions:UpdateMessages()
 		return
 	end
 	
-	self:RegisterMessage('ITEM_HIGHLIGHT_QUALITY_UPDATE')
-	self:RegisterMessage('ITEM_HIGHLIGHT_UNUSABLE_UPDATE')
-	self:RegisterMessage('ITEM_HIGHLIGHT_QUEST_UPDATE')
+	self:RegisterMessage('ITEM_HIGHLIGHT_UPDATE')
 	self:RegisterMessage('ITEM_SLOT_COLOR_ENABLED_UPDATE')
 	self:RegisterMessage('ITEM_SLOT_COLOR_UPDATE')
-	self:RegisterMessage('ITEM_HIGHLIGHT_OPACITY_UPDATE')
+	self:RegisterMessage('ITEM_HIGHLIGHT_UPDATE')
 end
 
-function ColorOptions:ITEM_HIGHLIGHT_QUALITY_UPDATE()
-	self:GetHighlightItemsByQualityCheckbox():UpdateChecked()
-end
-
-function ColorOptions:ITEM_HIGHLIGHT_UNUSABLE_UPDATE()
-	self:GetHighlightUnusableItemsCheckbox():UpdateChecked()
-end
-
-function ColorOptions:ITEM_HIGHLIGHT_QUEST_UPDATE()
-	self:GetHighlightQuestItemsCheckbox():UpdateChecked()
+function ColorOptions:ITEM_HIGHLIGHT_UPDATE()
+	self.highlightItemsByQualityCheckbox:UpdateChecked()
+	self.highlightUnusableItemsCheckbox:UpdateChecked()
+	self.highlightQuestItemsCheckbox:UpdateChecked()
+	self.highlightSetItemsCheckbox:UpdateChecked()
+	self.highlightOpacitySlider:UpdateValue()
 end
 
 function ColorOptions:ITEM_SLOT_COLOR_ENABLED_UPDATE()
@@ -73,10 +67,6 @@ end
 
 function ColorOptions:ITEM_SLOT_COLOR_UPDATE(msg, type, r, g, b)
 	self:GetItemSlotColorSelector(type):SetColor(r, g, b, a)
-end
-
-function ColorOptions:ITEM_HIGHLIGHT_OPACITY_UPDATE()
-	self:GetHighlightOpacitySlider():UpdateValue()
 end
 
 
@@ -105,11 +95,14 @@ function ColorOptions:AddWidgets()
 	local highlightItemsByQuality = self:CreateHighlightItemsByQualityCheckbox()
 	highlightItemsByQuality:SetPoint('TOPLEFT', colorItemSlots, 'BOTTOMLEFT', 0, -SPACING)
 
-        local highlightUnusableItems = self:CreateHighlightUnusableItemsCheckbox()
-	highlightUnusableItems:SetPoint('TOPLEFT', highlightItemsByQuality, 'BOTTOMLEFT', 0, -SPACING)   
+    local highlightUnusableItems = self:CreateHighlightUnusableItemsCheckbox()
+	highlightUnusableItems:SetPoint('TOPLEFT', highlightItemsByQuality, 'BOTTOMLEFT', 0, -SPACING)
+
+	local highlightSetItems = self:CreateHighlightSetItemsCheckbox()
+	highlightSetItems:SetPoint('TOPLEFT', highlightUnusableItems, 'BOTTOMLEFT', 0, -SPACING)
 
 	local highightQuestItems = self:CreateHighlightQuestItemsCheckbox()
-	highightQuestItems:SetPoint('TOPLEFT', highlightUnusableItems, 'BOTTOMLEFT', 0, -SPACING)
+	highightQuestItems:SetPoint('TOPLEFT', highlightSetItems, 'BOTTOMLEFT', 0, -SPACING)
 	
 	local opacity = self:CreateHighlightOpacitySlider()
 	opacity:SetPoint('BOTTOMLEFT', self, 'BOTTOMLEFT', 16, 10)
@@ -152,8 +145,6 @@ end
 
 --[[ Check Boxes ]]--
 
-
---highlight items by quality
 function ColorOptions:CreateHighlightItemsByQualityCheckbox()
 	local button = Bagnon.OptionsCheckButton:New(L.HighlightItemsByQuality, self)
 
@@ -162,19 +153,13 @@ function ColorOptions:CreateHighlightItemsByQualityCheckbox()
 	end
 
 	button.IsSettingEnabled = function(self)
-		return Bagnon.Settings:HighlightingItemsByQuality()
+		return Bagnon.Settings:HighlightItemsByQuality()
 	end
 
 	self.highlightItemsByQualityCheckbox = button
 	return button
 end
 
-function ColorOptions:GetHighlightItemsByQualityCheckbox()
-	return self.highlightItemsByQualityCheckbox
-end
-
-
---highlight unusable items
 function ColorOptions:CreateHighlightUnusableItemsCheckbox()
 	local button = Bagnon.OptionsCheckButton:New(L.HighlightUnusableItems, self)
 
@@ -190,12 +175,21 @@ function ColorOptions:CreateHighlightUnusableItemsCheckbox()
 	return button
 end
 
-function ColorOptions:GetHighlightUnusableItemsCheckbox()
-	return self.highlightUnusableItemsCheckbox
+function ColorOptions:CreateHighlightSetItemsCheckbox()
+	local button = Bagnon.OptionsCheckButton:New(L.HighlightSetItems, self)
+
+	button.OnEnableSetting = function(self, enable)
+		Bagnon.Settings:SetHighlightSetItems(enable)
+	end
+
+	button.IsSettingEnabled = function(self)
+		return Bagnon.Settings:HighlightSetItems()
+	end
+
+	self.highlightSetItemsCheckbox = button
+	return button
 end
 
-
---highlight quest items
 function ColorOptions:CreateHighlightQuestItemsCheckbox()
 	local button = Bagnon.OptionsCheckButton:New(L.HighlightQuestItems, self)
 
@@ -204,17 +198,12 @@ function ColorOptions:CreateHighlightQuestItemsCheckbox()
 	end
 
 	button.IsSettingEnabled = function(self)
-		return Bagnon.Settings:HighlightingQuestItems()
+		return Bagnon.Settings:HighlightQuestItems()
 	end
 
 	self.highlightQuestItemsCheckbox = button
 	return button
 end
-
-function ColorOptions:GetHighlightQuestItemsCheckbox()
-	return self.highlightQuestItemsCheckbox
-end
-
 
 --color item slots
 function ColorOptions:CreateColorItemSlotsCheckbox()
@@ -239,7 +228,6 @@ end
 
 --[[ Sliders ]]--
 
---border opacity
 function ColorOptions:CreateHighlightOpacitySlider()
 	local slider = Bagnon.OptionsSlider:New(L.ItemHighlightOpacity, self, 10, 100, 1)
 
@@ -258,11 +246,6 @@ function ColorOptions:CreateHighlightOpacitySlider()
 	self.highlightOpacitySlider = slider
 	return slider
 end
-
-function ColorOptions:GetHighlightOpacitySlider()
-	return self.highlightOpacitySlider
-end
-
 
 --[[ Color Pickers ]]--
 

@@ -232,6 +232,8 @@ function FrameOptions:UpdateWidgets()
 	end
 
 	local settings = self:GetSettings()
+	local frameID = self:GetFrameID()
+	local isSingleBag = frameID == 'guildbank' or frameID == 'voidstorage'
 
 	self:GetColorSelector():SetColor(settings:GetColor())
 	self:GetBorderColorSelector():SetColor(settings:GetBorderColor())
@@ -244,7 +246,7 @@ function FrameOptions:UpdateWidgets()
 	self:GetLayerSlider():UpdateValue()
 
 	self:GetToggleBagFrameCheckbox():UpdateChecked()
-	self:GetToggleBagFrameCheckbox():SetDisabled(self:GetFrameID() == 'guildbank')
+	self:GetToggleBagFrameCheckbox():SetDisabled(isSingleBag)
 
 	self:GetToggleMoneyFrameCheckbox():UpdateChecked()
 	self:GetToggleDBOFrameCheckbox():UpdateChecked()
@@ -252,10 +254,10 @@ function FrameOptions:UpdateWidgets()
 	self:GetToggleOptionsCheckbox():UpdateChecked()
 	
 	self:GetReverseSlotOrderCheckbox():UpdateChecked()
-	self:GetReverseSlotOrderCheckbox():SetDisabled(self:GetFrameID() == 'guildbank')
+	self:GetReverseSlotOrderCheckbox():SetDisabled(isSingleBag)
 	
 	self:GetBagBreakCheckbox():UpdateChecked()
-	self:GetBagBreakCheckbox():SetDisabled(self:GetFrameID() == 'guildbank')
+	self:GetBagBreakCheckbox():SetDisabled(isSingleBag)
 end
 
 
@@ -267,11 +269,15 @@ function FrameOptions:CreateFrameSelector()
 	dropdown.titleText:Hide()
 
 	dropdown.Initialize = function(self)
-		self:AddItem(L.Inventory, 'inventory')
+		self:AddItem(INVENTORY_TOOLTIP, 'inventory')
 		self:AddItem(L.Bank, 'bank')
 		
-		if IsAddOnLoaded('Bagnon_GuildBank') then
-			self:AddItem(L.GuildBank, 'guildbank')
+		if select(5, GetAddOnInfo('Bagnon_GuildBank')) then
+			self:AddItem(GUILD_BANK, 'guildbank')
+		end
+		
+		if select(5, GetAddOnInfo('Bagnon_VoidStorage')) then
+			self:AddItem(VOID_STORAGE, 'voidstorage')
 		end
 	end
 
