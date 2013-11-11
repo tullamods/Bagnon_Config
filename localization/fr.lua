@@ -1,5 +1,5 @@
 --[[
-	Bagnon Config Localization Information: French Language
+	Bagnon Config Localization: French Language
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'frFR')
