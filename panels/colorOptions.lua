@@ -13,7 +13,7 @@ Bagnon.ColorOptions = ColorOptions
 local SPACING = 4
 local SLOT_COLOR_TYPES = {}
 
-for id, name in pairs(BAGNON_BAG_TYPES) do
+for id, name in pairs(Bagnon.BAG_TYPES) do
 	tinsert(SLOT_COLOR_TYPES, name)
 end
 
