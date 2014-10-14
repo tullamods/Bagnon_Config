@@ -99,6 +99,8 @@ function FrameOptions:OnActivate()
 	self:GetToggleSortButtonCheckbox():SetDisabled(isSingleBag)
 
 	self:GetToggleMoneyFrameCheckbox():UpdateChecked()
+	self:GetToggleSortButtonCheckbox():SetDisabled(frameID == 'voidstorage')
+
 	self:GetToggleDBOFrameCheckbox():UpdateChecked()
 	self:GetToggleSearchFrameCheckbox():UpdateChecked()
 	self:GetToggleOptionsCheckbox():UpdateChecked()
@@ -228,7 +230,7 @@ function FrameOptions:CreateFrameSelector()
 
 	dropdown.Initialize = function(self)
 		self:AddItem(INVENTORY_TOOLTIP, 'inventory')
-		self:AddItem(L.Bank, 'bank')
+		self:AddItem(BANK, 'bank')
 		
 		if GetAddOnEnableState(UnitName('player'), 'Bagnon_GuildBank') >= 2 then
 			self:AddItem(GUILD_BANK, 'guildbank')
