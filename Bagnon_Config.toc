@@ -4,7 +4,11 @@
 ## Author: Tuller & Jaliborc (João Cardoso)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
+## Version: 6.0.16
+
+..\Bagnon\libs\Poncho-1.0\Poncho-1.0.xml
+..\Bagnon\libs\Sushi-3.0\Sushi-3.0.xml
 
 localization\localization.xml
-widgets\widgets.xml
-panels\panels.xml
+group.lua
+panels.lua
