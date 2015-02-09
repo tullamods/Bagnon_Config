@@ -6,7 +6,7 @@
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
 
 -- general
-L.GeneralTitle = 'General features that can be toggled depening on your preferences.'
+L.GeneralDesc = 'General features that can be toggled depening on your preferences.'
 L.RequiresRestart = 'This setting will take effect the next time you log in'
 
 L.Locked = 'Lock Frames'
@@ -19,7 +19,7 @@ L.UseBlizzard = 'Display Blizzard Frames for Hidden Bags'
 
 -- frame
 L.FrameSettings = 'Frame Settings'
-L.FrameSettingsTitle = 'Configuration settings specific to a Bagnon frame.'
+L.FrameSettingsDesc = 'Configuration settings specific to a Bagnon frame.'
 L.Frame = 'Frame'
 L.Enabled = 'Enable Frame'
 
@@ -46,7 +46,7 @@ L.Alpha = 'Opacity'
 
 -- auto display
 L.DisplaySettings = 'Automatic Display'
-L.DisplaySettingsTitle = 'These settings allow you to configure when your inventory automatically opens or closes due to game events.'
+L.DisplaySettingsDesc = 'These settings allow you to configure when your inventory automatically opens or closes due to game events.'
 L.DisplayInventory = 'Display Inventory'
 L.CloseInventory = 'Close Inventory'
 
@@ -65,7 +65,7 @@ L.CloseVendor = 'Leaving a Vendor'
 
 -- colors
 L.ColorSettings = 'Color Settings'
-L.ColorSettingsTitle = 'These settings allow you to change how item slots are presented on Bagnon frames for easier identification.'
+L.ColorSettingsDesc = 'These settings allow you to change how item slots are presented on Bagnon frames for easier identification.'
 L.GlowQuality = 'Highlight Items by Quality' 
 L.GlowNew = 'Highlight New Items'
 L.GlowQuest = 'Highlight Quest Items'

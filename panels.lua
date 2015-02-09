@@ -21,7 +21,7 @@ StaticPopupDialogs['BAGNON_REQUIRES_RESTART'] = {
 
 --[[ Panels ]]--
 
-Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralTitle, function(self)
+Bagnon.GeneralOptions = Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralDesc, function(self)
 	self:CreateCheck('locked')
 	self:CreateCheck('fading')
 	self:CreateCheck('tipCount')
@@ -31,7 +31,7 @@ Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralTitle, function(self)
 	end)
 end)
 
-Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsTitle, function(self)
+Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsDesc, function(self)
 	local frames = self:Create('Dropdown')
 	frames:SetLabel(L.Frame)
 	frames:SetValue(self.frameID)
@@ -74,9 +74,9 @@ Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsTitle, functio
 		self:CreateRow(200, function(self)
 			self:CreatePercentSlider('alpha', 1, 100)
 			self:CreatePercentSlider('scale', 20, 300)
+			self:Break()
 
 			self.sets = Bagnon:GetProfile()[self.frameID]
-			self:Break()
 			self:CreatePercentSlider('itemScale', 20, 300)
 			self:CreateSlider('spacing', 0, 15)
 			self:CreateSlider('columns', 1, 30)
@@ -84,7 +84,7 @@ Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsTitle, functio
 	end
 end)
 
-Bagnon.Options:NewPanel('Bagnon', L.DisplaySettings, L.DisplaySettingsTitle, function(self)
+Bagnon.DisplayOptions = Bagnon.Options:NewPanel('Bagnon', L.DisplaySettings, L.DisplaySettingsDesc, function(self)
 	self:CreateHeader(L.DisplayInventory, 'GameFontHighlight', true)
 	for i, event in ipairs {'Bank', 'Auction', 'Guildbank', 'Mail', 'Player', 'Trade', 'Gems', 'Craft'} do
 		self:CreateCheck('display' .. event)
@@ -96,7 +96,7 @@ Bagnon.Options:NewPanel('Bagnon', L.DisplaySettings, L.DisplaySettingsTitle, fun
 	end
 end)
 
-Bagnon.Options:NewPanel('Bagnon', L.ColorSettings, L.ColorSettingsTitle, function(self)
+Bagnon.ColorOptions = Bagnon.Options:NewPanel('Bagnon', L.ColorSettings, L.ColorSettingsDesc, function(self)
 	self:CreateCheck('glowQuality')
 	self:CreateCheck('glowNew')
 	self:CreateCheck('glowQuest')
