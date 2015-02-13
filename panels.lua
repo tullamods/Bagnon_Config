@@ -46,7 +46,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 	end
 	
 	if GetAddOnEnableState(UnitName('player'), 'Bagnon_VoidStorage') >= 2 then
-		frames:AddLine('voidstorage', VOID_STORAGE)
+		frames:AddLine('vault', VOID_STORAGE)
 	end
 
 	self.sets = Bagnon.sets.frames[self.frameID]
