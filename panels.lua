@@ -54,32 +54,33 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 
 	if self.sets.enabled then
 		self:CreateHeader(DISPLAY, 'GameFontHighlight', true)
-		self:CreateRow(70, function(self)
-			self:CreateCheck('bagFrame')
-			self:CreateCheck('sort')
-			self:CreateCheck('search')
-			self:CreateCheck('options')
-			self:CreateCheck('money')
-			self:CreateCheck('broker')
+		self:CreateRow(70, function(row)
+			row:CreateCheck('bagFrame')
+			row:CreateCheck('sort')
+			row:CreateCheck('search')
+			row:CreateCheck('options')
+			row:CreateCheck('money')
+			row:CreateCheck('broker')
 		end)
 
 		self:CreateHeader(L.Appearance, 'GameFontHighlight', true)
-		self:CreateRow(70, function(self)
-			self:CreateColor('color')
-			self:CreateColor('borderColor')
-			self:CreateCheck('bagBreak')
-			self:CreateCheck('reverseSlots')
+		self:CreateRow(70, function(row)
+			row:CreateColor('color')
+			row:CreateColor('borderColor')
+			row:CreateCheck('bagBreak')
+			row:CreateCheck('reverseSlots')
 		end)
 
-		self:CreateRow(200, function(self)
-			self:CreatePercentSlider('alpha', 1, 100)
-			self:CreatePercentSlider('scale', 20, 300)
-			self:Break()
+		self:CreateRow(200, function(row)
+			row.sets = self.sets
+			row:CreatePercentSlider('alpha', 1, 100)
+			row:CreatePercentSlider('scale', 20, 300)
+			row:Break()
 
-			self.sets = Bagnon:GetProfile()[self.frameID]
-			self:CreatePercentSlider('itemScale', 20, 300)
-			self:CreateSlider('spacing', 0, 15)
-			self:CreateSlider('columns', 1, 30)
+			row.sets = Bagnon:GetProfile()[self.frameID]
+			row:CreatePercentSlider('itemScale', 20, 300)
+			row:CreateSlider('spacing', 0, 15)
+			row:CreateSlider('columns', 1, 30)
 		end)
 	end
 end)
