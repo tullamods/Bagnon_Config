@@ -67,8 +67,9 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 		self:CreateRow(70, function(row)
 			row:CreateColor('color')
 			row:CreateColor('borderColor')
-			row:CreateCheck('bagBreak')
+			row:CreateCheck('reverseBags')
 			row:CreateCheck('reverseSlots')
+			row:CreateCheck('bagBreak')
 		end)
 
 		self:CreateRow(200, function(row)

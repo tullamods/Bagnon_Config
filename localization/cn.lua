@@ -1,5 +1,5 @@
 ﻿--[[
-	Bagnon Config Localization: Chinese Simplified
+	Chinese Simplified Localization
 		Credits: Diablohu, yleaf@cwdg, 狂飙@cwdg, 天下牧@萨格拉斯
 --]]
 

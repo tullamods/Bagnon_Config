@@ -1,5 +1,5 @@
 --[[
-	Bagnon Config Localization: English
+	English Localization
 		This file must be present to have partial translations
 --]]
 
@@ -33,6 +33,7 @@ L.Options = 'Options Button'
 L.Appearance = 'Appearance'
 L.Layer = 'Layer'
 L.BagBreak = 'Bag Break'
+L.ReverseBags = 'Reverse Bag Order'
 L.ReverseSlots = 'Reverse Slot Order'
 
 L.Color = 'Background Color'

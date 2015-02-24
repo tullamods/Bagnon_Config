@@ -1,5 +1,5 @@
 --[[
-	Bagnon Config Localization Information: German Language
+	German Localization
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'deDE')

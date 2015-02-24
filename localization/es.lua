@@ -1,5 +1,5 @@
 --[[
-    Bagnon Config Localization: Spanish
+    Spanish Localization
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'esES') or LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'esMX')

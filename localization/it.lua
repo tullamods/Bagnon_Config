@@ -1,4 +1,6 @@
---[[Bagnon Config Localization - Italian]]
+--[[
+	Italian Localization
+]]--
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'itIT')
 if not L then return end
