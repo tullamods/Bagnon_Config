@@ -26,6 +26,7 @@ Bagnon.GeneralOptions = Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralDesc, fu
 	self:CreateCheck('fading')
 	self:CreateCheck('tipCount')
 	self:CreateCheck('flashFind')
+	self:CreateCheck('emptySlots')
 	self:CreateCheck('useBlizzard', function()
 		StaticPopup_Show('BAGNON_REQUIRES_RESTART')
 	end)
@@ -53,6 +54,10 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 	self:CreateCheck('enabled'):SetDisabled(self.frameID ~= 'inventory' and self.frameID ~= 'bank')
 
 	if self.sets.enabled then
+		if self.frameID == 'bank' then
+			self:CreateCheck('exclusiveReagent')
+		end
+
 		self:CreateHeader(DISPLAY, 'GameFontHighlight', true)
 		self:CreateRow(70, function(row)
 			row:CreateCheck('bagFrame')
@@ -72,7 +77,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			row:CreateCheck('bagBreak')
 		end)
 
-		self:CreateRow(200, function(row)
+		self:CreateRow(190, function(row)
 			row.sets = self.sets
 			row:CreatePercentSlider('alpha', 1, 100)
 			row:CreatePercentSlider('scale', 20, 300)
@@ -93,7 +98,7 @@ Bagnon.DisplayOptions = Bagnon.Options:NewPanel('Bagnon', L.DisplaySettings, L.D
 	end
 
 	self:CreateHeader(L.CloseInventory, 'GameFontHighlight', true)
-	for i, event in ipairs {'Combat', 'Vehicle', 'Vendor'} do
+	for i, event in ipairs {'Bank', 'Combat', 'Vehicle', 'Vendor'} do
 		self:CreateCheck('close' .. event)
 	end
 end)

@@ -98,10 +98,11 @@ end
 function Options:CreateColor(arg)
 	local color = self.sets[arg]
 	local child = self:Create('ColorPicker')
+	child:EnableAlpha(true)
 	child:SetValue(color[1], color[2], color[3])
 	child:SetText(L[arg:gsub('^.', strupper)])
-	child:SetCall('OnInput', function(_, a,b,c)
-		color[1], color[2], color[3] = a, b, c
+	child:SetCall('OnInput', function(_, r,g,b,a)
+		color[1], color[2], color[3], color[4] = r,g,b,a
 		Bagnon:UpdateFrames()
 	end)
 

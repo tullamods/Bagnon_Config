@@ -7,14 +7,13 @@ local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
 
 -- general
 L.GeneralDesc = 'General features that can be toggled depening on your preferences.'
-L.RequiresRestart = 'This setting will take effect the next time you log in'
+L.RequiresRestart = 'This setting will take effect the next time you log in or reload the UI.'
 
 L.Locked = 'Lock Frames'
 L.Fading = 'Frame Fading'
 L.TipCount = 'Tooltip Item Count'
 L.FlashFind = 'Flash Find'
 L.EmptySlots = 'Display Background on Empty Slots'
-L.DisableBags = 'Hide Bags When Clicked'
 L.UseBlizzard = 'Display Blizzard Frames for Hidden Bags'
 
 -- frame
@@ -22,6 +21,7 @@ L.FrameSettings = 'Frame Settings'
 L.FrameSettingsDesc = 'Configuration settings specific to a Bagnon frame.'
 L.Frame = 'Frame'
 L.Enabled = 'Enable Frame'
+L.ExclusiveReagent = 'Separate Reagent Bank'
 
 L.BagFrame = 'Bag List'
 L.Money = 'Money'
@@ -62,6 +62,7 @@ L.DisplayGems = 'Socketing Items'
 
 L.CloseCombat = 'Entering Combat'
 L.CloseVehicle = 'Entering a Vehicle'
+L.CloseBank = 'Leaving the Bank'
 L.CloseVendor = 'Leaving a Vendor'
 
 -- colors
