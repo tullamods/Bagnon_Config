@@ -109,6 +109,15 @@ function Options:CreateColor(arg)
 	return child
 end
 
+function Options:CreateDropdown(arg, ...)
+	local drop = self:CreateInput('Dropdown', arg)
+	drop:AddLines(...)
+	drop:SetCall('OnInput', function(self, v)
+		self.sets[arg] = v
+		Bagnon:UpdateFrames()
+	end)
+end
+
 function Options:CreateInput(type, arg)
 	local child = self:Create(type)
 	child:SetLabel(L[arg:gsub('^.', strupper)])

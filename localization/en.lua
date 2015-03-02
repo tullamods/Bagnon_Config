@@ -39,6 +39,7 @@ L.ReverseSlots = 'Reverse Slot Order'
 L.Color = 'Background Color'
 L.BorderColor = 'Border Color'
 
+L.Strata = 'Frame Layer'
 L.Columns = 'Columns'
 L.Scale = 'Scale'
 L.ItemScale = 'Item Scale'

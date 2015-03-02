@@ -58,6 +58,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			self:CreateCheck('exclusiveReagent')
 		end
 
+		-- Display
 		self:CreateHeader(DISPLAY, 'GameFontHighlight', true)
 		self:CreateRow(70, function(row)
 			row:CreateCheck('bagFrame')
@@ -68,6 +69,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			row:CreateCheck('broker')
 		end)
 
+		-- Appearance
 		self:CreateHeader(L.Appearance, 'GameFontHighlight', true)
 		self:CreateRow(70, function(row)
 			row:CreateColor('color')
@@ -77,8 +79,9 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			row:CreateCheck('bagBreak')
 		end)
 
-		self:CreateRow(190, function(row)
+		self:CreateRow(170, function(row)
 			row.sets = self.sets
+			row:CreateDropdown('strata', 'LOW',LOW, 'MEDIUM',AUCTION_TIME_LEFT2, 'HIGH',HIGH)
 			row:CreatePercentSlider('alpha', 1, 100)
 			row:CreatePercentSlider('scale', 20, 300)
 			row:Break()
