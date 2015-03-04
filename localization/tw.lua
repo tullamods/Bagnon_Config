@@ -8,15 +8,13 @@ if not L then return end
 
 -- general
 L.GeneralDesc = '根據你的喜好來切換一般功能設定。'
-L.RequiresRestart = '這設定生效將在你下次登入時'
-
 L.Locked = '鎖定框架'
 L.Fading = '框架淡化'
 L.TipCount = '物品統計提示'
 L.FlashFind = '閃爍找到'
 L.EmptySlots = '在空的槽位顯示背景顏色'
 L.DisableBags = '當點擊時隱藏背包'
-L.UseBlizzard = '隱藏的背包顯示為內建框架'
+L.Displaylizzard = '隱藏的背包顯示為內建框架'
 
 -- frame
 L.FrameSettings = '框架設定'

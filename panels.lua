@@ -11,12 +11,6 @@ end
 
 sort(SLOT_COLOR_TYPES)
 tinsert(SLOT_COLOR_TYPES, 1, 'normal')
-StaticPopupDialogs['BAGNON_REQUIRES_RESTART'] = {
-	text = L.RequiresRestart,
-	button1 = OKAY,
-	timeout = 0, exclusive = 1, hideOnEscape = 1,
-	preferredIndex = STATICPOPUP_NUMDIALOGS - 2
-}
 
 
 --[[ Panels ]]--
@@ -27,9 +21,7 @@ Bagnon.GeneralOptions = Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralDesc, fu
 	self:CreateCheck('tipCount')
 	self:CreateCheck('flashFind')
 	self:CreateCheck('emptySlots')
-	self:CreateCheck('useBlizzard', function()
-		StaticPopup_Show('BAGNON_REQUIRES_RESTART')
-	end)
+	self:CreateCheck('displayBlizzard', ReloadUI)
 end)
 
 Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsDesc, function(self)
@@ -43,7 +35,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 	end)
 	
 	if GetAddOnEnableState(UnitName('player'), 'Bagnon_GuildBank') >= 2 then
-		frames:AddLine('guildbank', GUILD_BANK)
+		frames:AddLine('guild', GUILD_BANK)
 	end
 	
 	if GetAddOnEnableState(UnitName('player'), 'Bagnon_VoidStorage') >= 2 then
@@ -61,12 +53,18 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 		-- Display
 		self:CreateHeader(DISPLAY, 'GameFontHighlight', true)
 		self:CreateRow(70, function(row)
-			row:CreateCheck('bagFrame')
-			row:CreateCheck('sort')
+			if self.frameID ~= 'guild' then
+				row:CreateCheck('bagFrame')
+				row:CreateCheck('sort')
+			end
+			
 			row:CreateCheck('search')
 			row:CreateCheck('options')
-			row:CreateCheck('money')
 			row:CreateCheck('broker')
+
+			if self.frameID ~= 'vault' then
+				row:CreateCheck('money')
+			end
 		end)
 
 		-- Appearance

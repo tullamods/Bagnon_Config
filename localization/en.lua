@@ -7,14 +7,12 @@ local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
 
 -- general
 L.GeneralDesc = 'General features that can be toggled depening on your preferences.'
-L.RequiresRestart = 'This setting will take effect the next time you log in or reload the UI.'
-
 L.Locked = 'Lock Frames'
 L.Fading = 'Frame Fading'
 L.TipCount = 'Tooltip Item Count'
 L.FlashFind = 'Flash Find'
 L.EmptySlots = 'Display Background on Empty Slots'
-L.UseBlizzard = 'Display Blizzard Frames for Hidden Bags'
+L.DisplayBlizzard = 'Display Blizzard Frames for Hidden Bags'
 
 -- frame
 L.FrameSettings = 'Frame Settings'
