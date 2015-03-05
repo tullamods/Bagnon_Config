@@ -1,6 +1,5 @@
 --[[
   Chinese Traditional Localization
-		Credits: Seraveegd@日落沼澤
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'zhTW')
@@ -13,7 +12,6 @@ L.Fading = '框架淡化'
 L.TipCount = '物品統計提示'
 L.FlashFind = '閃爍找到'
 L.EmptySlots = '在空的槽位顯示背景顏色'
-L.DisableBags = '當點擊時隱藏背包'
 L.Displaylizzard = '隱藏的背包顯示為內建框架'
 
 -- frame
@@ -21,6 +19,7 @@ L.FrameSettings = '框架設定'
 L.FrameSettingsDesc = '設定Bagnon框架。'
 L.Frame = '框架'
 L.Enabled = '啟用框架'
+L.ExclusiveReagent = '分離材料銀行'
 
 L.BagFrame = '背包列表'
 L.Money = '金錢'
@@ -32,11 +31,13 @@ L.Options = '設定按鈕'
 L.Appearance = '外觀'
 L.Layer = '階層'
 L.BagBreak = '根據背包顯示'
+L.ReverseBags = '反轉背包順序'
 L.ReverseSlots = '反轉槽位順序'
 
 L.Color = '背景顏色'
 L.BorderColor = '邊框顏色'
 
+L.Strata = '框架層級'
 L.Columns = '列'
 L.Scale = '縮放'
 L.ItemScale = '物品縮放'
@@ -60,6 +61,7 @@ L.DisplayGems = '鑲崁寶石'
 
 L.CloseCombat = '進入戰鬥'
 L.CloseVehicle = '進入載具'
+L.CloseBank = '離開銀行'
 L.CloseVendor = '離開商人'
 
 -- colors

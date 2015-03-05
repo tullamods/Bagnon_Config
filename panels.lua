@@ -84,9 +84,9 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			row:CreatePercentSlider('scale', 20, 300)
 			row:Break()
 
-			row.sets = Bagnon:GetProfile()[self.frameID]
+			row.sets = Bagnon.profile[self.frameID]
 			row:CreatePercentSlider('itemScale', 20, 300)
-			row:CreateSlider('spacing', 0, 15)
+			row:CreateSlider('spacing', -15, 15)
 			row:CreateSlider('columns', 1, 30)
 		end)
 	end
