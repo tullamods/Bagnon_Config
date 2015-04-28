@@ -19,6 +19,7 @@ L.FrameSettings = 'Frame Settings'
 L.FrameSettingsDesc = 'Configuration settings specific to a Bagnon frame.'
 L.Frame = 'Frame'
 L.Enabled = 'Enable Frame'
+L.CharacterSpecific = 'Character Specific Settings'
 L.ExclusiveReagent = 'Separate Reagent Bank'
 
 L.BagFrame = 'Bag List'

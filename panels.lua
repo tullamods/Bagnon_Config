@@ -12,6 +12,21 @@ end
 sort(SLOT_COLOR_TYPES)
 tinsert(SLOT_COLOR_TYPES, 1, 'normal')
 
+local SetProfile = function(profile)
+	Bagnon:SetProfile(profile)
+	Bagnon.profile = Bagnon:GetProfile()
+	Bagnon:UpdateFrames()
+	Bagnon.FrameOptions:Update()
+end
+
+StaticPopupDialogs['Bagnon_ConfirmGlobals'] = {
+	text = 'Are you sure you want to disable specific settings for this character? All specific settings will be lost.',
+	OnAccept = function() SetProfile(nil) end,
+	whileDead = 1, exclusive = 1, hideOnEscape = 1,
+	button1 = YES, button2 = NO,
+	timeout = 0,
+}
+
 
 --[[ Panels ]]--
 
@@ -42,7 +57,18 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 		frames:AddLine('vault', VOID_STORAGE)
 	end
 
-	self.sets = Bagnon.sets.frames[self.frameID]
+	local global = self:Create('Check')
+	global:SetLabel(L.CharacterSpecific)
+	global:SetValue(Bagnon:GetSpecificProfile())
+	global:SetCall('OnInput', function(_, v)
+		if Bagnon:GetSpecificProfile() then
+			StaticPopup_Show('Bagnon_ConfirmGlobals')	
+		else
+			SetProfile({})
+		end
+	end)
+
+	self.sets = Bagnon.profile[self.frameID]
 	self:CreateCheck('enabled'):SetDisabled(self.frameID ~= 'inventory' and self.frameID ~= 'bank')
 
 	if self.sets.enabled then
@@ -77,18 +103,16 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 			row:CreateCheck('bagBreak')
 		end)
 
-		self:CreateRow(170, function(row)
-			row.sets = self.sets
+		self:CreateRow(162, function(row)
 			row:CreateDropdown('strata', 'LOW',LOW, 'MEDIUM',AUCTION_TIME_LEFT2, 'HIGH',HIGH)
 			row:CreatePercentSlider('alpha', 1, 100)
 			row:CreatePercentSlider('scale', 20, 300)
 			row:Break()
 
-			row.sets = Bagnon.profile[self.frameID]
 			row:CreatePercentSlider('itemScale', 20, 300)
 			row:CreateSlider('spacing', -15, 15)
 			row:CreateSlider('columns', 1, 30)
-		end)
+		end).bottom = -50
 	end
 end)
 
