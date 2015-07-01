@@ -64,7 +64,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 		if Bagnon:GetSpecificProfile() then
 			StaticPopup_Show('Bagnon_ConfirmGlobals')	
 		else
-			SetProfile({})
+			SetProfile(CopyTable(Bagnon.sets.global))
 		end
 	end)
 
@@ -111,7 +111,7 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 
 			row:CreatePercentSlider('itemScale', 20, 300)
 			row:CreateSlider('spacing', -15, 15)
-			row:CreateSlider('columns', 1, 30)
+			row:CreateSlider('columns', 1, 50)
 		end).bottom = -50
 	end
 end)
