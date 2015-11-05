@@ -14,6 +14,8 @@ L.TipCount = '物品統計提示'
 L.FlashFind = '閃爍找到'
 L.EmptySlots = '在空的槽位顯示背景顏色'
 L.DisplayBlizzard = '隱藏的背包顯示為內建框架'
+--L.AutoResetPlayer = 'Auto-Reset to Current Character'
+--L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = '框架設定'

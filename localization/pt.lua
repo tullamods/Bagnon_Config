@@ -14,6 +14,8 @@ L.TipCount = 'Ativar contagem de itens nas dicas de interface'
 L.FlashFind = 'Ativar Flash Find'
 L.EmptySlots = 'Mostrar fundo em espaços para itens vazios'
 L.DisplayBlizzard = 'Mostrar janelas da Blizzard para sacos desligados'
+--L.AutoResetPlayer = 'Auto-Reset to Current Character'
+--L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = 'Preferências de Janela'

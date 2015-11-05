@@ -14,6 +14,8 @@ L.TipCount = '启用物品统计提示'
 L.FlashFind = '启用闪烁搜索'
 L.EmptySlots = '显示空格背景材质'
 L.DisplayBlizzard = '禁用的背包使用暴雪默认框体'
+--L.AutoResetPlayer = 'Auto-Reset to Current Character'
+--L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = '显示设置'

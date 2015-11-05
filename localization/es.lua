@@ -14,6 +14,8 @@ L.TipCount = 'Mostrar recuento de objetos en tooltips'
 L.FlashFind = 'Activar Flash Find'
 L.EmptySlots = 'Mostrar un fondo para las ranuras de objetos vacías'
 L.DisplayBlizzard = 'Mostrar ventanas de Blizzard para bolsas desactivadas'
+L.AutoResetPlayer = 'Regresar automáticamente al personaje actual'
+L.AutoResetPlayerDesc = 'Regresar automáticamente al personaje actual al cerrar y reabrir de la ventana. Las ventadas del banco de hermandad y el depósito del vacío siempre van a regresar al personaje automátiamente al interactuar con un vendedor, independientemente de este ajuste.'
 
 -- frame
 L.FrameSettings = 'Opciones de ventana'

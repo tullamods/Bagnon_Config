@@ -14,6 +14,8 @@ L.TipCount = 'Attiva conteggio degli oggetti.'
 L.FlashFind = 'Attiva ricerca mediante sintassi.'
 L.DisplayBlizzard = 'Mostra le finestre di Blizzard per le borse disabilitate.'
 L.EmptySlots = 'Mostra uno sfondo per gli scomparti vuoti.'
+--L.AutoResetPlayer = 'Auto-Reset to Current Character'
+--L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = 'Impostazioni finestre'

@@ -14,6 +14,8 @@ L.TipCount = 'Включить в подсказки предметов их к�
 L.FlashFind = 'Включить вспышку поиска'
 L.EmptySlots = 'Отображать фон пустых ячеек'
 L.DisplayBlizzard = 'Открывать стандартные окна для отключенных сумок.'
+--L.AutoResetPlayer = 'Auto-Reset to Current Character'
+--L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = 'Настройки окна'

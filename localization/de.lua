@@ -9,11 +9,13 @@ if not L then return end
 -- general
 L.GeneralDesc = 'Allgemeine Einstellungen für Bagnon anpassen'
 L.Locked = 'Fensterpositionen sperren'
-L.Fading = 'Ermögliche Ausblenden des Fensters'
-L.TipCount = 'Ermögliche tooltip item count'
-L.FlashFind = 'Ermögliche Blitzsuche'
-L.EmptySlots = 'Zeige einen Hintergrund für leere Gegenstandslots'
-L.DisplayBlizzard = 'Blizzard Fenster für die deaktivierten Taschen anzeigen'
+L.Fading = 'Fenster ausblenden'
+L.TipCount = 'Gegenständenzählung in Tooltipps anzeigen'
+L.FlashFind = 'Blitzsuche ermöglichen'
+L.EmptySlots = 'Hintergrund für leere Gegenstandslots anzeigen'
+L.DisplayBlizzard = 'Blizzard-Fenster für deaktivierte Taschen anzeigen'
+L.AutoResetPlayer = 'Automatisch zum aktuellen Charakter zurückkehren'
+L.AutoResetPlayerDesc = 'Kehr automatisch zum aktuellen Charakcter zurück, wenn du einen Fenster schließt und wieder öffnet. Unabhängig von dieser Einstellung werden die Bank und das Leerenlager immer zum aktuellen Character bei Interaktion mit einem damit verbundenen NPC zurückkehren.'
 
 -- frame
 L.FrameSettings = 'Fenstereinstellungen'
