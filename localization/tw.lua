@@ -13,7 +13,7 @@ L.Fading = '框架淡化'
 L.TipCount = '物品統計提示'
 L.FlashFind = '閃爍找到'
 L.EmptySlots = '在空的槽位顯示背景顏色'
-L.Displaylizzard = '隱藏的背包顯示為內建框架'
+L.DisplayBlizzard = '隱藏的背包顯示為內建框架'
 
 -- frame
 L.FrameSettings = '框架設定'
