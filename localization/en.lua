@@ -6,7 +6,7 @@
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
 
 -- general
-L.GeneralDesc = 'General features that can be toggled depening on your preferences.'
+L.GeneralDesc = 'General features that can be toggled depending on your preferences.'
 L.Locked = 'Lock Frames'
 L.Fading = 'Frame Fading'
 L.TipCount = 'Tooltip Item Count'
