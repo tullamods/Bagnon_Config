@@ -14,6 +14,8 @@ L.TipCount = 'Tooltip Item Count'
 L.FlashFind = 'Flash Find'
 L.EmptySlots = 'Display Background on Empty Slots'
 L.DisplayBlizzard = 'Display Blizzard Frames for Hidden Bags'
+L.AutoResetPlayer = 'Auto-Reset to Current Character'
+L.AutoResetPlayerDesc = 'Automatically switch back to the current character when closing and re-opening frames. The bank and void storage frames will always switch to the current character when clicking on a related NPC, regardless of this setting.'
 
 -- frame
 L.FrameSettings = 'Frame Settings'

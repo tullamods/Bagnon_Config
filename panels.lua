@@ -37,6 +37,7 @@ Bagnon.GeneralOptions = Bagnon.Options:NewPanel(nil, 'Bagnon', L.GeneralDesc, fu
 	self:CreateCheck('flashFind')
 	self:CreateCheck('emptySlots')
 	self:CreateCheck('displayBlizzard', ReloadUI)
+	self:CreateCheck('autoResetPlayer'):SetTip(L.AutoResetPlayerDesc)
 end)
 
 Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.FrameSettingsDesc, function(self)
