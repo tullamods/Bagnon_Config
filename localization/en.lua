@@ -1,12 +1,13 @@
 --[[
 	English Localization
 		This file must be present to have partial translations
+		***
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'enUS', true)
 
 -- general
-L.GeneralDesc = 'General features that can be toggled depening on your preferences.'
+L.GeneralDesc = 'General features that can be toggled depending on your preferences.'
 L.Locked = 'Lock Frames'
 L.Fading = 'Frame Fading'
 L.TipCount = 'Tooltip Item Count'
@@ -68,7 +69,7 @@ L.CloseVendor = 'Leaving a Vendor'
 -- colors
 L.ColorSettings = 'Color Settings'
 L.ColorSettingsDesc = 'These settings allow you to change how item slots are presented on Bagnon frames for easier identification.'
-L.GlowQuality = 'Highlight Items by Quality' 
+L.GlowQuality = 'Highlight Items by Quality'
 L.GlowNew = 'Highlight New Items'
 L.GlowQuest = 'Highlight Quest Items'
 L.GlowUnusable = 'Highlight Unusable Items'

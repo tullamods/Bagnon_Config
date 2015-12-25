@@ -1,73 +1,90 @@
 --[[
 	Italian Localization
+		***
 ]]--
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'itIT')
 if not L then return end
 
+-- general
+L.GeneralDesc = 'Impostazioni generali di configurazioni per Bagnon.'
+L.Locked = 'Blocca la posizione della finestra.'
+L.Fading = 'Attiva opacità finestra.'
+L.TipCount = 'Attiva conteggio degli oggetti.'
+L.FlashFind = 'Attiva ricerca mediante sintassi.'
+L.DisplayBlizzard = 'Mostra le finestre di Blizzard per le borse disabilitate.'
+L.EmptySlots = 'Mostra uno sfondo per gli scomparti vuoti.'
+
+-- frame
+L.FrameSettings = 'Impostazioni finestre'
+L.FrameSettingsDesc = 'Configurazioni specifiche per le finestre di Bagnon.'
+L.Frame = 'Finestra'
+L.Enabled = 'Attiva la finestra'
+--L.CharacterSpecific = 'Character Specific Settings'
+--L.ExclusiveReagent = 'Separate Reagent Bank'
+
+L.BagFrame = 'Attiva riquadro borse'
+L.Money = 'Riquadro delle monete'
+L.Broker = 'Riquadro degli addon (Data Broker)'
+L.Sort = "Bottone per l'ordinamento"
+L.Search = 'Pulsante di ricerca'
+L.Options = 'Pulsante delle opzioni'
+
+L.Appearance = 'Aspetto'
+L.Layer = 'Livello'
+L.BagBreak = 'Separazione tra borse'
+L.ReverseBags = 'Inverti i borse'
+L.ReverseSlots = 'Inverti i scomparti'
+
+L.Color = 'Colore della finestra'
+L.BorderColor = 'Colore del bordo'
+
+L.Strata = 'Livello'
 L.Columns = 'Colonne'
 L.Scale = 'Proporzione'
+L.Scale = 'Scala di oggetti'
 L.Spacing = 'Distanza'
-L.Opacity = 'Opacità'
-L.FrameColor = 'Colore della finestra.'
-L.FrameBorderColor = 'Colore bordo della finestra.'
-L.Frame = 'Riquadro'
-L.LockFramePositions = 'Blocca la posizione della finestra.'
-L.ShowEmptyItemSlotBackground = 'Mostra uno sfondo per gli scomparti vuoti.'
-L.HighlightItemsByQuality = 'Evidenzia oggetti per qualità.'
-L.HighlightNewItems = 'Evidenzia i nuovi oggetti.'
-L.HighlightUnusableItems = 'Evidenzia oggetti non utilizzabili.'
-L.HighlightSetItems = "Evidenzia l'equipaggiamento che fa parte di un set."
-L.HighlightQuestItems = 'Evidenzia oggetti delle missioni.'
-L.ReverseSlotOrdering = 'Inverti ordinamento delle borse.'
-L.ColorItemSlotsByBagType = 'Colora gli scomparti vuoti in base al tipo di borsa.'
-L.FrameLayer = 'Livello'
-L.EnableBagFrame = 'Attiva riquadro borse.'
-L.EnableMoneyFrame = 'Attiva riquadro delle monete.'
-L.EnableDBOFrame = 'Attiva riquadro degli addon (Data Broken).'
-L.EnableSortButton = "Attiva il bottone per l'ordinamento."
-L.EnableSearchToggle = 'Attiva pulsante di ricerca.'
-L.EnableOptionsToggle = 'Attiva pulsante delle opzioni.'
-L.EnableFrame_inventory = "Attiva finestra dell'Inventario."
-L.EnableFrame_bank = 'Attiva finestra della Banca.'
-L.SettingRequiresRestart = "Questa impostazione avrà effetto al riavvio dell'interfaccia."
+L.Alpha = 'Opacità'
 
-L.EnableAutoDisplay_bank = "Mostra l'Inventario quando si visita la Banca."
-L.EnableAutoDisplay_ah = "Mostra l'Inventario quando si visita la casa d'aste."
-L.EnableAutoDisplay_vendor = "Chiudi l'Inventario quando ti allontani da un venditore."
-L.EnableAutoDisplay_trade = "Mostra l'Inventario quando scambi degli oggetti."
-L.EnableAutoDisplay_craft = "Mostra l'Inventario durante la professione."
-L.EnableAutoDisplay_mail = "Mostra l'Inventario mentre controlli la posta."
-L.EnableAutoDisplay_guildbank = "Mostra l'Inventario mentre controlli la Banca di Gilda."
-L.EnableAutoDisplay_player = "Mostra l'Inventario quando apri la finestra del giocatore."
-L.EnableAutoDisplay_combat = "Chiudi l'Inventario quando entri in combattimento."
-L.EnableAutoDisplay_vehicle = "Chiudi l'Inventario quando sali su un veicolo."
-L.EnableAutoDisplay_gems = "Mostra l'Inventario quando inserisci una gemma nell'incavo di un oggetto."
-
+-- auto display
 L.DisplaySettings = 'Mostra automaticamente'
-L.DisplaySettingsTitle = 'Condizioni per mostrare automaticamente Bagnon.'
-L.FrameSettings = 'Impostazioni finestre'
-L.FrameSettingsTitle = 'Configurazioni specifiche per le finestre di Bagnon.'
-L.GeneralSettings = 'Impostazioni generali'
-L.GeneralSettingsTitle = 'Impostazioni generali di configurazioni per Bagnon.'
-L.EnableBlizzardBagPassThrough = 'Mostra le finestre di Blizzard per le borse disabilitate.'
-L.EnableBagBreak = 'Separa, distintamente, gli scoparti relativi alla singola borsa.'
-L.ColorSettings = 'Impostazioni del colore'
-L.ColorSettingsTitle = 'Impostazione dei colori sui vari oggetti.'
-L.ItemHighlightOpacity = 'Brillantezza oggetti evidenziati.'
-L.EnableFlashFind = 'Attiva ricerca mediante sintassi.'
-L.EnableTipCount = 'Attiva conteggio degli oggetti.'
-L.EnableFading = 'Attiva opacità finestra.'
-L.AllowDisableBags = 'Disabilita una borsa quando premuta.'
+L.DisplaySettingsDesc = 'Condizioni per mostrare automaticamente Bagnon.'
+L.DisplayInventory = 'Mostra l\'inventario'
+L.CloseInventory = 'Chiudi l\'Inventario'
 
-L.ItemSlotColor_normal = 'Colore normale'
-L.ItemSlotColor_leather = 'Colore borse per conciatori'
-L.ItemSlotColor_inscri = 'Colore borse per runografi'
-L.ItemSlotColor_herb = 'Colore borse per erbalisti'
-L.ItemSlotColor_enchant = 'Colore borse per incantatori'
-L.ItemSlotColor_engineer = 'Colore borse per ingegneri'
-L.ItemSlotColor_gem = 'Colore borse per orafi'
-L.ItemSlotColor_mine = 'Colore borse per minatori'
-L.ItemSlotColor_tackle = 'Colore borsa degli attrezzi'
-L.ItemSlotColor_cooking = 'Colore borsa frigorifera'
-L.ItemSlotColor_reagent = 'Colore scomparto reagenti in Banca'
+L.DisplayBank = "quando si visita la Banca"
+L.DisplayAuction = "quando si visita la casa d'aste"
+L.DisplayTrade = "quando scambi degli oggetti"
+L.DisplayCraft = "durante la professione"
+L.DisplayMail = "mentre controlli la posta"
+L.DisplayGuildbank = "mentre controlli la Banca di Gilda"
+L.DisplayPlayer = "quando apri la finestra del giocatore"
+L.DisplayGems = "quando inserisci una gemma nell'incavo di un oggetto"
+
+L.CloseCombat = "quando entri in combattimento"
+L.CloseVehicle = "quando entri un veicolo"
+L.CloseBank = 'quando sali la Banca'
+L.CloseVendor = "quando ti allontani da un venditore"
+
+-- colors
+L.ColorSettings = 'Impostazioni del colore'
+L.ColorSettingsDesc = 'Impostazione dei colori sui vari oggetti.'
+L.GlowQuality = 'Evidenzia oggetti per qualità.'
+L.GlowNew = 'Evidenzia i nuovi oggetti.'
+L.GlowQuest = 'Evidenzia oggetti delle missioni.'
+L.GlowUnusable = 'Evidenzia oggetti non utilizzabili.'
+L.GlowSets = "Evidenzia l'equipaggiamento che fa parte di un set."
+L.ColorSlots = 'Colora gli scomparti vuoti in base al tipo di borsa.'
+
+L.NormalColor = 'Colore normale'
+L.LeatherColor = 'Borse per conciatori'
+L.InscribeColor = 'Borse per runografi'
+L.HerbColor = 'Borse per erbalisti'
+L.EnchantColor = 'Borse per incantatori'
+L.EngineerColor = 'Borse per ingegneri'
+L.GemColor = 'Borse per orafi'
+L.MineColor = 'Borse per minatori'
+L.TackleColor = 'Borse degli attrezzi'
+L.RefrigeColor = 'Borse frigorifera'
+L.ReagentColor = 'Scomparto reagenti in Banca'
+L.GlowAlpha = 'Brillantezza oggetti evidenziati'

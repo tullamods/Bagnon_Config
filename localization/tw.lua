@@ -1,5 +1,6 @@
 --[[
   Chinese Traditional Localization
+		***
 --]]
 
 local L = LibStub('AceLocale-3.0'):NewLocale('Bagnon-Config', 'zhTW')
@@ -12,13 +13,14 @@ L.Fading = '框架淡化'
 L.TipCount = '物品統計提示'
 L.FlashFind = '閃爍找到'
 L.EmptySlots = '在空的槽位顯示背景顏色'
-L.Displaylizzard = '隱藏的背包顯示為內建框架'
+L.DisplayBlizzard = '隱藏的背包顯示為內建框架'
 
 -- frame
 L.FrameSettings = '框架設定'
 L.FrameSettingsDesc = '設定Bagnon框架。'
 L.Frame = '框架'
 L.Enabled = '啟用框架'
+--L.CharacterSpecific = 'Character Specific Settings'
 L.ExclusiveReagent = '分離材料銀行'
 
 L.BagFrame = '背包列表'
