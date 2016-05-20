@@ -4,7 +4,7 @@
 ## Author: Tuller & Jaliborc (João Cardoso)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
-## Version: 6.2.6
+## Version: 6.2.7
 
 ..\Bagnon\libs\Poncho-1.0\Poncho-1.0.xml
 ..\Bagnon\libs\Sushi-3.0\Sushi-3.0.xml
