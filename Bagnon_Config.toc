@@ -1,10 +1,10 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: |cff20ff20Bagnon Config|r
 ## Notes: Load on demand configuration for Bagnon
 ## Author: Tuller & Jaliborc (João Cardoso)
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
-## Version: 6.2.7
+## Version: 7.0.0
 
 ..\Bagnon\libs\Poncho-1.0\Poncho-1.0.xml
 ..\Bagnon\libs\Sushi-3.0\Sushi-3.0.xml
