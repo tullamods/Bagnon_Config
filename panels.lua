@@ -106,9 +106,18 @@ Bagnon.FrameOptions = Bagnon.Options:NewPanel('Bagnon', L.FrameSettings, L.Frame
 		self:CreateRow(162, function(row)
 			row:CreateDropdown('strata', 'LOW',LOW, 'MEDIUM',AUCTION_TIME_LEFT2, 'HIGH',HIGH)
 			row:CreatePercentSlider('alpha', 1, 100)
-			row:CreatePercentSlider('scale', 20, 300)
-			row:Break()
+			row:CreatePercentSlider('scale', 20, 300):SetCall('OnInput', function(self,v)
+				local new = v/100
+				local old = self.sets.scale
+				local ratio = new / old
 
+				self.sets.x =  self.sets.x / ratio
+				self.sets.y =  self.sets.y / ratio
+				self.sets.scale = new
+				Bagnon:UpdateFrames()
+			end)
+
+			row:Break()
 			row:CreatePercentSlider('itemScale', 20, 300)
 			row:CreateSlider('spacing', -15, 15)
 			row:CreateSlider('columns', 1, 50)
