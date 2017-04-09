@@ -1,14 +1,10 @@
-## Interface: 70100
-## Title: |cff20ff20Bagnon Config|r
-## Notes: Load on demand configuration for Bagnon
-## Author: Tuller & Jaliborc (João Cardoso)
+## Interface: 70200
+## Title: |cff5FC412Bagnon Config|r
+## Author: Tuller and Jaliborc (João Cardoso)
+## Notes: An options menu for Bagnon
 ## Dependencies: Bagnon
 ## LoadOnDemand: 1
-## Version: 7.1.1
+## Version: 7.2.0
 
-..\Bagnon\libs\Poncho-1.0\Poncho-1.0.xml
-..\Bagnon\libs\Sushi-3.0\Sushi-3.0.xml
-
-localization\localization.xml
-group.lua
-panels.lua
+main.lua
+common\Wildpants_Config.xml
