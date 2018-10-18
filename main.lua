@@ -5,7 +5,7 @@
 
 local CONFIG, Config = ...
 Config.addon = 'Bagnon'
-Config.displayRowHeight = 105
+Config.displayRowHeight = 103
 Config.components = true
 Config.colors = true
 Config.columns = true
